@@ -216,7 +216,7 @@ def distribute_charging_events(
     If 'fill_existing_only' is True, only existing charging points are filled.
     """
     # reset seed so that the locations are always the same
-    rng = np.random.default_rng(seed)
+    #rng = np.random.default_rng(seed)
 
     if fill_existing_only:
         print("Using the 'fill_existing_only' method: Only existing charging points will be filled.")
