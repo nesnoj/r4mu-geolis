@@ -72,6 +72,7 @@ def postprocess_public_demands(charging_locations: gpd.GeoDataFrame, located_cha
                 # Ladevent umverteilen
                 located_charging_events.at[idx, "location_id"] = new_location_id
                 located_charging_events.at[idx, "mode"] = "street"
+                located_charging_events.at[idx, "geometry"] = loc_with_free_capacity.geometry
 
                 # Maske updaten
                 # Abziehen der belegten Zeitschritte von der ursprünglichen home_street Location
